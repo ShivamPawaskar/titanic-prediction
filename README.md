@@ -7,12 +7,6 @@
 
 An end-to-end Titanic survival prediction project that combines feature engineering, model tuning, ensembling, and a live interactive prediction app.
 
-## Why This Repo Stands Out
-
-- moves beyond a single notebook by including a runnable web app
-- uses engineered family and passenger features, not only raw columns
-- compares multiple models and ensemble strategies
-- is easier to explore, reuse, and present as a portfolio project
 
 ## Project Snapshot
 
