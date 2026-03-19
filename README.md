@@ -6,10 +6,13 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)](https://streamlit.io/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)](https://scikit-learn.org/)
 [![Kaggle](https://img.shields.io/badge/Kaggle-Titanic-20BEFF.svg)](https://www.kaggle.com/competitions/titanic)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-success.svg)](https://titanic-prediction-euncq4cfjurw2bwuvbe8im.streamlit.app/)
 
 An end-to-end Titanic survival prediction project that combines feature engineering, model tuning, ensembling, and a live interactive prediction app.
 
 ![App Preview](assets/preview.svg)
+
+Live app: https://titanic-prediction-euncq4cfjurw2bwuvbe8im.streamlit.app/
 
 ## Why This Repo Stands Out
 
@@ -87,6 +90,8 @@ This repository is set up to look good directly on GitHub:
 - the notebook remains viewable in the browser
 
 For a fully live version of the app, deploy `app.py` on Streamlit Community Cloud and place the public link near the top of this README.
+The current live deployment is available here:
+https://titanic-prediction-euncq4cfjurw2bwuvbe8im.streamlit.app/
 
 ## Repository Structure
 
