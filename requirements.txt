@@ -7,3 +7,5 @@ xgboost
 lightgbm
 optuna
 jupyter
+streamlit
+plotly

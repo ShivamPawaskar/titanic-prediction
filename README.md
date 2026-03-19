@@ -1,25 +1,51 @@
 # Titanic Survival Prediction
 
-Machine learning project for the Kaggle Titanic competition using feature engineering, hyperparameter tuning, and ensemble models built in Jupyter.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)](https://streamlit.io/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)](https://scikit-learn.org/)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Titanic-20BEFF.svg)](https://www.kaggle.com/competitions/titanic)
 
-## Project Overview
+An end-to-end Titanic survival prediction project that combines feature engineering, model tuning, ensembling, and a live interactive prediction app.
 
-This notebook predicts passenger survival on the Titanic dataset. The workflow includes:
+## Why This Repo Stands Out
 
-- loading the Kaggle `train.csv` and `test.csv` files
-- feature engineering from names, tickets, cabins, and family information
-- leave-one-out group survival features to capture family and ticket-level patterns
-- Optuna tuning for XGBoost and LightGBM
-- comparison of multiple classifiers with 10-fold stratified cross-validation
-- final prediction through stacking or soft-voting ensemble selection
+- moves beyond a single notebook by including a runnable web app
+- uses engineered family and passenger features, not only raw columns
+- compares multiple models and ensemble strategies
+- is easier to explore, reuse, and present as a portfolio project
 
-## Files
+## Project Snapshot
 
-- `Titanic_Prediction.ipynb` - main notebook with data preparation, training, evaluation, and submission generation
-- `train.csv` - training dataset
-- `test.csv` - test dataset
-- `submission.csv` - generated submission file
-- `gender_submission.csv` - Kaggle reference submission file
+| Area | Details |
+|---|---|
+| Problem | Predict whether a passenger survived the Titanic disaster |
+| Dataset | Kaggle Titanic `train.csv` and `test.csv` |
+| Main Workflow | EDA, feature engineering, tuning, model comparison, ensemble selection |
+| Notebook | `Titanic_Prediction.ipynb` |
+| Interactive Demo | `app.py` with Streamlit |
+
+## Pipeline
+
+```mermaid
+flowchart LR
+    A[Raw Kaggle Data] --> B[Cleaning and Missing Value Handling]
+    B --> C[Feature Engineering]
+    C --> D[Model Training]
+    D --> E[Cross Validation Comparison]
+    E --> F[Stacking and Soft Voting]
+    F --> G[Submission File]
+    C --> H[Interactive Streamlit App]
+```
+
+## What The Notebook Does
+
+- loads and inspects the Titanic training and test data
+- creates leave-one-out survival features based on ticket groups and last names
+- engineers features such as title, family size, deck, and categorical encodings
+- tunes XGBoost and LightGBM with Optuna
+- compares multiple models with 10-fold stratified cross-validation
+- builds stacking and soft-voting ensembles
+- exports the final `submission.csv`
 
 ## Models Used
 
@@ -29,57 +55,81 @@ This notebook predicts passenger survival on the Titanic dataset. The workflow i
 - Extra Trees
 - HistGradientBoosting
 - Support Vector Classifier
-- Logistic Regression meta-learner for stacking
+- Logistic Regression as a stacking meta-learner
 
-## Feature Engineering Highlights
+## Interactive App
 
-- extracted passenger titles from names
-- grouped rare titles
-- built family size and family category features
-- extracted cabin deck information
-- filled missing values for age, fare, and embarkation
-- created leave-one-out survival features using ticket groups and last names
-- label-encoded categorical variables
+The Streamlit app lets a user enter passenger details and instantly see:
 
-## Tech Stack
+- predicted survival probability
+- final survival class
+- feature summary for the entered passenger
+- dataset context such as class distribution and average survival rate
 
-- Python
-- Jupyter Notebook
-- pandas
-- numpy
-- scikit-learn
-- xgboost
-- lightgbm
-- optuna
-- matplotlib
-- seaborn
+Run it locally:
 
-## How To Run
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-1. Create and activate a Python environment.
+## Repository Structure
+
+```text
+.
+|-- app.py
+|-- Titanic_Prediction.ipynb
+|-- train.csv
+|-- test.csv
+|-- submission.csv
+|-- gender_submission.csv
+|-- requirements.txt
+|-- README.md
+|-- LICENSE
+`-- .streamlit/
+    `-- config.toml
+```
+
+## Quick Start
+
+1. Create a virtual environment.
 2. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Open the notebook:
+3. Launch the notebook for the full training workflow:
 
 ```bash
 jupyter notebook Titanic_Prediction.ipynb
 ```
 
-4. Run the cells in order to train models and regenerate `submission.csv`.
+4. Or launch the interactive app:
 
-## Notes
+```bash
+streamlit run app.py
+```
 
-- The notebook installs some packages inline as well, but `requirements.txt` is included for cleaner setup.
-- Model selection is based on cross-validation performance before generating the final submission.
-- `submission.csv` contains predictions for the Kaggle test set.
+## Core Features
+
+- title extraction from passenger names
+- family size and isolation indicators
+- fare and age imputation
+- categorical encoding for sex, embarkation, and class-aware inputs
+- model comparison and ensemble-based final prediction
+
+## Ideas For Further Improvement
+
+- add screenshots or a short demo GIF in an `assets/` folder
+- move notebook logic into reusable `src/` modules
+- publish the Streamlit app online
+- add automated tests for preprocessing and prediction logic
+- track notebook and app performance metrics in the README
 
 ## Dataset Source
 
-Dataset files are from the Kaggle Titanic competition:
+Kaggle Titanic competition:
 https://www.kaggle.com/competitions/titanic
 
 ## Author
