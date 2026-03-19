@@ -7,5 +7,6 @@ xgboost
 lightgbm
 optuna
 jupyter
-streamlit
+streamlit>=1.42.0,<2
+altair>=5,<6
 plotly
