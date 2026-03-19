@@ -1,5 +1,7 @@
 # Titanic Survival Prediction
 
+![Titanic Banner](assets/banner.svg)
+
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)](https://streamlit.io/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)](https://scikit-learn.org/)
@@ -7,6 +9,14 @@
 
 An end-to-end Titanic survival prediction project that combines feature engineering, model tuning, ensembling, and a live interactive prediction app.
 
+![App Preview](assets/preview.svg)
+
+## Why This Repo Stands Out
+
+- moves beyond a single notebook by including a runnable web app
+- uses engineered family and passenger features, not only raw columns
+- compares multiple models and ensemble strategies
+- is easier to explore, reuse, and present as a portfolio project
 
 ## Project Snapshot
 
@@ -66,6 +76,17 @@ Run it locally:
 pip install -r requirements.txt
 streamlit run app.py
 ```
+
+## GitHub Display
+
+This repository is set up to look good directly on GitHub:
+
+- banner and app preview render inline in the README
+- badges make the tech stack easy to scan
+- Mermaid pipeline diagram explains the workflow visually
+- the notebook remains viewable in the browser
+
+For a fully live version of the app, deploy `app.py` on Streamlit Community Cloud and place the public link near the top of this README.
 
 ## Repository Structure
 
