@@ -1,4 +1,4 @@
-# Titanic Survival Prediction 000000000000000000
+# Titanic Survival Prediction 000000
 
 ![Titanic Banner](assets/banner.svg)
 
