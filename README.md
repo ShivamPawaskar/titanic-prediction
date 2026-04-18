@@ -1,4 +1,4 @@
-# Titanic Survival Prediction 64
+# Titanic Survival Prediction 6
 
 ![Titanic Banner](assets/banner.svg)
 
